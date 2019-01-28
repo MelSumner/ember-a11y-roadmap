@@ -8,7 +8,7 @@ List of things we will attempt to improve:
 - modals
 - keyboard navigation
 - [linting](linting.md) 
-- guides & developer education
+- [guides & developer education](guides.md)
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
 
 
