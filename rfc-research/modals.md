@@ -6,7 +6,7 @@ There are two types of modals:
 - [Dialog(Modal)](https://www.w3.org/TR/wai-aria-practices/#dialog_modal)
 - [Alert and Message Dialogs](https://www.w3.org/TR/wai-aria-practices/#alertdialog)
 
-A **dialog modal** will have more text and interactive elements than an **alert modal**. For example, a dialog modal could as the user to fill out a form. An alert or message dialog is for situations where you need to bring the user's attention immediately to an urgent message. For example, deleting a record could show an alert dialog that says "You're about to delete this record. Are you sure?" 
+A **dialog modal** will have more text and interactive elements than an **alert modal**. For example, a dialog modal could ask the user to fill out a form. An alert or message dialog is for situations where you need to bring the user's attention immediately to an urgent message. For example, deleting a record could show an alert dialog that says "You're about to delete this record. Are you sure?" 
 
 ### Keyboard Navigation
 There are three keyboard navigation pieces to modals. When a dialog opens, focus moves to an element inside the dialog. After that, three keyboard navigation (combinations?) must work:  
