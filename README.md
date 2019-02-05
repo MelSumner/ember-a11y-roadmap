@@ -14,7 +14,7 @@ List of things we will improve:
 - [semantic test helpers](https://github.com/emberjs/rfcs/pull/327)
 
 ## RFC ideas to research
-- modals (parent window inert, focus management)
+- modals (parent window inert, focus management) [[RFC Research]](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/modals.md)
 - keyboard nav?
 - focus management?
 
