@@ -42,11 +42,11 @@ Try it out for yourself: https://wicg.github.io/inert/demo/
 
 This is how you can do this in React[\*](https://github.com/WICG/inert/issues/58): 
 - Use the node's ref to set the inert attribute
-```
+```js
 return <div ref={node => node && node.setAttribute('inert', '')} />
 ```
 - Or, conditionally: 
- ```
+ ```js
  <div
   ref={node => node && (shouldBeInert ?
     node.setAttribute('inert', '') : node.removeAttribute('inert')
