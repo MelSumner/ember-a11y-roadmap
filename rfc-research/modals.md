@@ -29,19 +29,35 @@ These are the areas that developers often fail to get modals correct. Incorrect 
 - modal content gets inserted dynamically in the wrong places (i.e., just inside of the body tag).
 - missing aria-* and role attributes
 
-## Some Ideas
+## A possible solution
 If we were going to make this work, how _could_ we do it? 
 
-### In Ember
 If we could solve anything in Ember natively, narrowing scope to the most common issue would be a reasonable approach. If possible, Ember could ensure that if a modal is open, the parent window is toggled to an inert state (often referred to as a "focus trap").
 
-#### Research further: 
-- Can we tell if a browser window has a modal? 
-  - window.parent check?
-- Could we make the parent window inert?
-  - What does inert mean? https://html.spec.whatwg.org/multipage/interaction.html#inert 
-  - Evaluate the [inert polyfill](https://github.com/WICG/inert)
+### The Inert Attribute
 
-### Alternatives
+There is a polyfill available for the `inert` HTML attribute (see [inert polyfill](https://github.com/WICG/inert)). Since Ember has already demonstrated a willingness to use polyfills when necessary, it seems reasonable that a polyfill that provides a much needed accessibility feature to the framework would be acceptable. 
+
+Try it out for yourself: https://wicg.github.io/inert/demo/ 
+
+This is how you can do this in React[\*](https://github.com/WICG/inert/issues/58): 
+- Use the node's ref to set the inert attribute
+```
+return <div ref={node => node && node.setAttribute('inert', '')} />
+```
+- Or, conditionally: 
+ ```
+ <div
+  ref={node => node && (shouldBeInert ?
+    node.setAttribute('inert', '') : node.removeAttribute('inert')
+  )}
+/>
+```
+
+Implementing `inert` as a low-level primitive in Ember would not only provide a out-of-the-box way to support modals, but also make it easier to accessibly implement infinite scrolling UIs (specifically, ones that re-uses or pre-renders nodes). 
+
+This could be an optional feature that the user opts into, the same way they opt into removing the application template wrapper. 
+
+## Alternatives
 - have an officially supported addon - ember-a11y-modal
-- screen for common failures through linting
+- screen for common failures through linting 
