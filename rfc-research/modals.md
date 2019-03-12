@@ -53,7 +53,7 @@ return <div ref={node => node && node.setAttribute('inert', '')} />
   )}
 />
 ```
-
+## Why we should do this
 Implementing `inert` as a low-level primitive in Ember would not only provide a out-of-the-box way to support modals, but also make it easier to accessibly implement infinite scrolling UIs (specifically, ones that re-uses or pre-renders nodes). 
 
 This could be an optional feature that the user opts into, the same way they opt into removing the application template wrapper. 
