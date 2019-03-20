@@ -20,7 +20,7 @@ List of things we will improve:
 
 ## Documentation
 - [guides & developer education](guides.md)
-- a11y for the emberjs.com guides
+- a11y for the [emberjs.com guides](https://guides.emberjs.com/release/reference/accessibility-guide/) 
 - update ember-a11y website
  - add best practices for ember components
  - give helpful information for ember addons
