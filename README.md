@@ -22,6 +22,7 @@ List of things we should improve:
 ## Documentation
 - [guides & developer education](guides.md)
 - a11y for the [emberjs.com guides](https://guides.emberjs.com/release/reference/accessibility-guide/) 
+- Add a11y check/section to RFC process
 - update ember-a11y website
  - add best practices for ember components
  - give helpful information for ember addons
