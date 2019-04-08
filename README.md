@@ -3,6 +3,8 @@ A Potential Roadmap for all things a11y in ember.js.
 
 First, if you are not familiar with digital accessibility, please reference the [conversation prep document](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/conversation-prep.md) first. **You will likely be ill-equipped to think about the problem space without some introduction to the topic.** 
 
+If you wish to contribute to this repository, PRs are welcome.
+
 ## List of things we could improve 
 - the way routing works with screen readers
 - focus management
