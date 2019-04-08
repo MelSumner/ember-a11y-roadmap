@@ -1,7 +1,9 @@
 # ember-a11y-roadmap
-Roadmap for all things a11y in ember.js
+A Potential Roadmap for all things a11y in ember.js. 
 
-List of things we should improve: 
+First, if you are not familiar with accessibiliy, please reference the [conversation prep document](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/conversation-prep.md) or at least keep it handy. You will likely be ill-equipped to think about the problem space without some introduction to the topic. 
+
+## List of things we could improve 
 - the way routing works with screen readers
 - focus management
 - modals
@@ -9,7 +11,7 @@ List of things we should improve:
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
 
 
-## RFCs that exist: 
+## RFCs that exist
 - [accessible routing in Ember.js](https://github.com/emberjs/rfcs/pull/433)
 - [semantic test helpers](https://github.com/emberjs/rfcs/pull/327)
 
