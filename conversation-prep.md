@@ -1,5 +1,5 @@
 
-# Conversation Prep document
+# Conversation Prep
 This document is intended to help prepare an Ember expert for a conversation about accessibility and assumes no prior knowledge. 
 
 This prep document is divided into three main sections: 
