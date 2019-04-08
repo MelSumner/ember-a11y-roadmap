@@ -11,13 +11,16 @@ If you wish to contribute to this repository, PRs are welcome.
 - modals/popups/alerts
 - keyboard navigation
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
+- linting
+- ember language server support
 
+## RFCs 
 
-## RFCs that exist
+### Existing
 - [accessible routing in Ember.js](https://github.com/emberjs/rfcs/pull/433)
 - [semantic test helpers](https://github.com/emberjs/rfcs/pull/327)
 
-## RFC ideas to research/write
+### Research/write
 - vocalizing support for assistive technology (screen readers, specifically) in the same way we list browser support
 - modals (parent window inert, focus management) [[RFC Research]](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/modals.md)
 - keyboard nav
