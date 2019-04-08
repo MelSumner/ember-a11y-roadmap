@@ -29,6 +29,8 @@ This section has three sub-sections:
 ### Routing (in Ember)
 (presentation deck & thinking about solutions)
 
+Watch a short video that demonstrates the issue: https://youtu.be/Jr-de-YV4X0
+
 Other Existing Solutions
 We should review these approaches to see if they are feasible:
 
