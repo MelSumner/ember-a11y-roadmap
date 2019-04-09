@@ -22,7 +22,7 @@ If you wish to contribute to this repository, PRs are welcome.
 
 ### Research/write
 - vocalizing support for assistive technology (screen readers, specifically) in the same way we list browser support
-- modals (parent window inert, focus management) [[RFC Research]](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/modals.md)
+- modals (parent window inert, focus management) [[RFC Research]](dialogs/modals.md)
 - keyboard nav
 - focus management
 
