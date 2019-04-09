@@ -1,0 +1,471 @@
+Research: searching for "pushState" in the whatwg IRC chat log history.
+
+Found 151 results in #whatwg.
+6 Aug 2018
+#whatwg
+22:02smaug____
+Domenic: can't recall. (I wouldn't be surprised if something in pushState handling could lead to similar behavior though)
+10 May 2018
+#whatwg
+14:06Domenic
+annevk: do you think the live URL viewer should use replaceState instead of pushState so it doesn't generate history entries every time you type something? Or maybe debounced, hmm.
+18 Apr 2017
+#whatwg
+00:16Domenic
+Well, I manage to crash chrome when pushState()/replaceState()ing shared array buffers :D
+16 Dec 2016
+#whatwg
+15:01wanderview
+although I guess we allow Client.url to be different in the cases where history.pushState() has changed the location
+28 Sep 2016
+#whatwg
+05:34Domenic
+KiChjang: for one document -> many URL, use pushState or replaceState
+05:34Domenic
+the URL changes with pushState, replaceState, fragment navigation so far... probably a few more
+05:35KiChjang
+pushState?
+05:35Domenic
+html.spec.whatwg.org/#dom-history-pushstate
+2 Jun 2016
+#whatwg
+00:09laughinghan
+dbaron: thank you so much!! (re fixing :target to respect pushState)
+9 May 2016
+#whatwg
+20:08zewt
+looks like the change that screwed up the android tracer was making the second argument to History.pushState required
+21 Apr 2016
+#whatwg
+19:41laughinghan
+thanks to discussion with smaug____, I think I've found a good reason to believe that fixing :target selectors to update upon history.pushState() is unlikely to break any webapps
+19:42laughinghan
+which is that currently after pushState, though :target selectors aren't updated, if you then hit Back and then Fwd, the :target rules will apply
+19:44laughinghan
+smaug____: oh, your idea that pushState() should also dispatch hashchange?
+19:46laughinghan
+therefore, pushState should fire hashchange after window.location and history.state have been updated
+14 Apr 2016
+#whatwg
+18:14smaug____
+laughinghan: I assume the discussion about hashchange and pushState etc. are in whatwg mailing list archives.
+11 Feb 2016
+#whatwg
+21:42smaug____
+oh, if does take pushState into account
+19 Nov 2015
+#whatwg
+13:41smaug____
+oh, I just realized Gecko does something very different to what the spec says with pushState/replaceState. Hmm, spec seems to have yet another bug there, but whether Gecko is sane...dunno
+18 Nov 2015
+#whatwg
+17:59smaug____
+annevk: want to do a sanity check? push/replaceState html.spec.whatwg.org/multipage/browsers.html#dom-history-pushstate don't seem to care at all whether the current entry is actually for the document for which the history object was created. I mean a case when one takes a reference to a history object and then navigates browser context to some other page, yet uses the old history object
+5 Oct 2015
+#whatwg
+14:57jochen__
+basically, anything that you can do via history.pushState
+9 Sep 2015
+#whatwg
+17:21annevk
+TabAtkins: pushState()
+19:46annevk
+slightlyoff: would folks expect that invoking pushState() changes how new URL() works?
+18 Aug 2015
+#whatwg
+16:20annevk
+Note that the document URL can also change through pushState()
+15 Jul 2015
+#whatwg
+13:10jochen__
+i still need to chat with jww about suborigins and pushState but that seems like a separate issue
+2 Mar 2015
+#whatwg
+05:46karanlyons
+I should clarify: pushstate, replacestate, being able to store state along with location data, this is all awesome.
+23 Oct 2014
+#whatwg
+16:32JakeA
+annevk: that means request.client.url wouldn't reflect changes made by pushState… *ponders on if that's a good or bad thing*
+16:44JakeA
+annevk: if I got a push message, I wouldn't show a notification if a relevant tab was focused & visible. For this case, pushState matters, I want the "location bar" url. For clients.takeControl(), if we go by post-pushState url, you get a weird edge-case where documents that were originally loaded out-of-scope could become controlled, so creationURL feels
+15 Oct 2014
+#whatwg
+13:25annevk
+MikeSmith: I thought that changed with pushState()
+7 Oct 2014
+#whatwg
+21:58caitp
+is there a reason why nobody seems to implement the title parameter of history.pushState() yet?
+18 Sep 2014
+#whatwg
+21:16caitp
+or rather, they work on the initial url, but if you use history.pushState(), it no longer works
+21:43caitp
+oh no, it is still doing something weird, at least in webkit/blink, basically if you pushState() and then cause the SVG to be re-rendered in some fashion, it gets it wrong, weird
+2 Jul 2014
+#whatwg
+22:44Hixie
+though exactly what they want depends on how they want to handle things like bfcache, bfcache eviction, fragmetn navigations, pushState, etc.
+28 May 2014
+#whatwg
+20:09japhet
+the behavior is explicitly state to be GET for pushState and replaceState, but i didn't see anything for fragment identifiers
+14 May 2014
+#whatwg
+13:57zewt
+but people putting data in the hash is a common, accepted practice, supported by the web (History.pushState) and it's not going away
+2 May 2014
+#whatwg
+20:28Domenic_
+I remember a long time ago reading an interview with Hixie where he was talking about all the vestigial things. I think the useless pushState argument was near the top of his list? Anyway it was refreshing honesty for someone new to all this.
+20:30Domenic_
+"... which leads to APIs that make no sense, like pushState(), which has a required argument that is ignored."
+20:38zewt
+if it was guaranteed to be ignored, i could say pushState(null, null, url) instead of pushState(null, document.title, url) ... 95% of the time the URL is all I want to change anyway
+16 Jan 2014
+#whatwg
+18:52Hixie
+aklein: it would cause all kinds of hassle with pushState(), e.g.
+18:52aklein
+not necessarily on pushState
+16 Dec 2013
+#whatwg
+23:30Hixie
+html. base. link. style. script. a href="" and ping="". cite="". img src and srcset. iframe. frame. embed. object. applet. video. track. source. src="" on <input type=image>, icon="". microdata's use of the aforementioned. window.open. location.*. pushState() and replaceState(). showModalDialog(). register*Handler(). external.AddSearchProvider(). drag and drop's use of some of the aforementioned.
+23:33zcorpan
+hmm i haven't tested window.open, location, pushState, replaceState
+5 Aug 2013
+#whatwg
+11:35annevk
+similar to pushState()
+19 Jun 2013
+#whatwg
+21:56aklein
+Hixie: question about PopStateEvent.state: is it meant to behave differently whether it was created via history.pushState() or new PopStateEvent()?
+21:56aklein
+Hixie: the spec says (non-normatively) that state 'Returns a copy of the information that was provided to pushState() or replaceState().'; but normatively, it also says 'The state attribute must return the value it was initialized to. '
+30 May 2013
+#whatwg
+21:03Hixie
+seems to work in hixie.ch/www/tests/adhoc/dom/level0/history/pushState/003.html
+21:03Hixie
+er, hixie.ch/tests/adhoc/dom/level0/history/pushState/a/b/c
+21:03Hixie
+er, hixie.ch/tests/adhoc/dom/level0/history/pushState/003.html
+21:16
+» GPHemsley gets "error: NS_ERROR_XPC_NOT_ENOUGH_ARGS: Not enough arguments [nsIDOMHistory.pushState] on line 5" on the first link
+21:43Hixie
+anyone disagree with my logic for base URLs in the source of hixie.ch/tests/adhoc/dom/level0/history/pushState/003.html ?
+21:45
+» gavinc has oddly been staring at baseuri and pushstate all week
+21:52Hixie
+so the pushState() calls would matter
+14 May 2013
+#whatwg
+23:42zewt
+yet another confused person who thinks pushState removes the need to store client-side state in the hash
+6 Mar 2013
+#whatwg
+00:21Hixie
+the URL changes only because of pushState() or using fragment identifiers
+20 Feb 2013
+#whatwg
+13:35jgraham
+In particular pushState
+4 Jan 2013
+#whatwg
+20:17Hixie
+hey bruce is asking me what my biggest mistake was for some article he's writing -- anyone got any suggestions? (i've already listed pushState, appcache, postMessage()'s security model...)
+3 Jan 2013
+#whatwg
+23:27Hixie
+pushState() being the best example
+26 Oct 2012
+#whatwg
+19:59annevk
+in fact I think people may even prefer sometimes using something like this over pushState() even when network is available as it makes it much easier to separate server and client logic
+25 Sep 2012
+#whatwg
+19:47dsheets
+Hixie: I am a real user and I have personally constructed systems to do this for real world use cases. It is useful in conjunction with pushState.
+19:47zewt
+how, concretely, is it useful with pushState?
+19:48zewt
+(i've used pushState extensively; I give it relative URLs, and it pushes a resolved absolute URL)
+19:59dsheets
+Hixie: the same source is served for all subpaths and the display is switched in JS to accomodate pushState
+20:02dsheets
+Hixie: your question is "why are there multiple subpaths in your single-page pushState-using web app?"? Is that accurate? Why not?
+20:05dsheets
+Hixie: How do I have one URL for multiple resources? Doesn't pushState allow me to design my URI scheme in a way that keeps distinct resources distinct?
+28 Aug 2012
+#whatwg
+14:13jgraham
+Hixie: Is there a difference between the behaviour in bug 18459 and just updating the document base to be the new document base on pushState unless there is a base element in which case not updating it?
+17:53jgraham
+Hixie: Something like hoppipolla.co.uk/tests/pushState/003.html ?
+17:54Hixie
+(i hate the way pushState() tests make it hard to view source in some browsers :-P)
+20 Aug 2012
+#whatwg
+15:40Hixie
+part of the pushState() and document.open() methods empties that queue
+15:45Hixie
+go(), pushState(), navigation, etc
+15:45Hixie
+maybe not pushState()
+16 Aug 2012
+#whatwg
+01:05Hixie
+you mean pushState()?
+01:06Hixie
+pushState() won't be used to make fragids disappear except for cases where the server knows how to generate pages for each url (e.g. how g+ does)
+01:21zewt
+rather not nice that the spec allows ignoring pushState for non-user-actions
+01:27zewt
+i have pages that eg. show a login prompt, on click send an XHR login request, and don't pushState until the login request succeeds
+01:51Hixie
+yeah using pushstate and then replacestate later seems like the best option
+13 Aug 2012
+#whatwg
+23:11zewt
+Hixie: in PopStateEvent? that only has .state (null when pushState/replaceState aren't used)
+1 Aug 2012
+#whatwg
+09:04jgraham
+Hmm, so I am confused about base URIs + pushState. If I have <base href="base/"><a href="foobar"></a> and I pushState the URL of the link, what should the a) document location, b) document base URL and c) resolved link URL be after the pushState?
+09:07jgraham
+TC: hoppipolla.co.uk/tests/pushState/001.html
+09:11jgraham
+In particular I don't quite follow why the document base URI doesn't change (in Wecko/GeKit) when you pushState
+09:28jgraham
+annevk: Well afaict the pushState should set the document's current address
+09:29annevk
+jgraham: and presumably pushState resolves its argument against the base URL for the Document the script is associated with
+09:32annevk
+jgraham: when defining document base URL I don't think Hixie considered pushState
+18:55jgraham
+Which doesn't seem to match browsers, at least to the extent that pushState doesn't seem to affect the base URI
+31 Jul 2012
+#whatwg
+16:02jgraham
+Hixie: Was there some change recently to the spec regarding pushState and base URLs? I (think I) remember you mentioning it, but I can't find it right now
+16:12Hixie
+hixie.ch/tests/adhoc/dom/level0/history/pushState
+29 Jun 2012
+#whatwg
+00:57Hixie
+(pushState vs base URLs)
+01:04Hixie
+and just have pushState() change the document's address directly
+11 Jun 2012
+#whatwg
+17:20Hixie
+pushState()'s second argument, for example
+21 Apr 2012
+#whatwg
+19:27shepazu
+once I've used pushState() to shove parameters up into the URI, what event can I use instead of 'load' to get older param states as the user walks back through the history?
+2 Dec 2011
+#whatwg
+20:36martndemus
+it should be static pages and json with pushState, not or
+28 Sep 2011
+#whatwg
+23:42Hixie
+jsut store the state with pushState or replaceState
+1 Jul 2011
+#whatwg
+12:19zcorpan
+would it be worth it to work around this misuse of the api so that if you reload a page that has used pushState, and the new page doesn't have an event listener for popstate, when you navigate back the browser uses the previous page (the one that used pushState) instead of staying on the current one
+22 Jun 2011
+#whatwg
+20:27zewt-
+crippling history.pushState bug still happens in FF5, apparently :| time to update my workarounds...
+14 Apr 2011
+#whatwg
+17:53bga_
+more and more ppl refuses to update browsers. internet becomes unsecure(pushState, fs access, system info, clipboard, ect), eat battery(webgl, css3), annoys(css3). ppl want old plain html :)
+25 Mar 2011
+#whatwg
+00:57Hixie
+...and i guess the overall pushState/popState feature now has a new name, history.state
+23 Mar 2011
+#whatwg
+19:57Hixie
+does opera have a pushstate implementation?
+11 Mar 2011
+#whatwg
+11:16jgraham
+e.g. if I pushState in an iframe it will clear a navigation queued in the parent?
+10 Mar 2011
+#whatwg
+00:24zewt
+i do window.history.pushState = null, which works ... but five seconds later, it's reset to the method
+00:25zewt
+anyone want to see if I'm going insane? zewt.org/~glenn/test-ff4rc1-pushState-assignment.html logs four times; after the last, after a long timer, pushState is back from the dead
+9 Mar 2011
+#whatwg
+23:17zewt
+zewt.org/~glenn/test-hashchange-ff4.html browser back after a history.pushState doesn't seem to fire onhashchange in ff4rc1 ... anyone feel like double-checking/confirming before I file it?
+23:19zewt
+history.pushState({}, window.title, url + "#1");
+23:19zewt
+i think it is (on browser back, not due to the pushState itself), but i'm not positive so i'm asking here
+23:20sicking
+zewt: you want it to fire when pressing "back". Not when calling pushState
+23:45zewt
+(since I'm in the "work around browser nits" part of my setup code for the pushState workaround)
+23:46Hixie
+i wish pushState was better designed
+10 Feb 2011
+#whatwg
+08:23othermaciej
+what browsers support History.pushState?
+7 Oct 2010
+#whatwg
+15:48Rik`
+annevk: is next Opera gonna support pushState ?
+28 Sep 2010
+#whatwg
+14:26annevk
+ben_alman, that pushState etc. hopefully solve
+14:26ben_alman
+pushState will solve that for sure
+26 Aug 2010
+#whatwg
+01:51mihaip
+Hixie: what happens to the pending state object if I call replaceState or pushState before onload fires?
+02:45mihaip
+Hixie: but then if you call pushState("bar") and then history.back() you would get a popstate event with with "foo"?
+02:46Hixie
+replaceState('foo'), then onload, then popstate, then pushState('bar') then history.back()?
+25 Aug 2010
+#whatwg
+21:53jlebar
+Hixie, since pushState doesn't cause a history traversal, there's no language saying that the UA should save the scroll position of the previous history entry.
+21:56jlebar
+At least, I forgot to do it when I implemented pushState. :)
+21:56jlebar
+Say you scroll down, pushState, scroll around, and then go back. Shouldn't you get the old scroll position back?
+21:57Hixie
+most apps i can imagine using pushState() would either not have any scroll position or would change the page so much on popstate that it'd be academic
+21:58jlebar
+Suppose you scroll down, pushState, then go visit some other page entirely. Then you go back to the first history entry. We should restore your scroll position, but we never saved it!
+22:47Hixie
+jlebar: btw re people.mozilla.org/~jlebar/respkg you can use "the document's address", pushState() doesn't change that (it changes "the document's current address")
+2 Aug 2010
+#whatwg
+19:52jlebar
+While we're bothering you, Hixie: What do you think about making the second parameter in pushState() modify document.title? Maybe that's better than the state we're in, where everyone (including, now, FF) ignores it.
+17 Feb 2010
+#whatwg
+22:57sicking
+such as getting rid of the 'title' argument on pushState
+23:15TabAtkins
+who all implements pushState and such so far?
+23:16
+» TabAtkins wants to throw some pushState at this ajax effect so it'll actually work with back/forward.
+23:18sicking
+pushState and replaceState
+15 Feb 2010
+#whatwg
+21:14Hixie
+but that's about pushState
+24 Nov 2009
+#whatwg
+00:25jlebar
+Hixie: I think we're going to land pushstate soon, and although I've been saying that for a few months now, I finally have a few reviews done on it, so I think it might actually happen in the near future. It would be nice not to change it after we land it.
+00:26jlebar
+I can go ahead and just take out the title parameter. We certainly don't have to have the replacement specified when we land pushstate.
+10 Nov 2009
+#whatwg
+20:48dw
+i seem to remember something about pushstate/popstate. might investigate that
+18 Oct 2009
+#whatwg
+22:42Hixie
+AryehGregor: and instead XHR the page over, pushState() the new URL, and replace the contents of the old page with the new page using innerHTML
+18 Aug 2009
+#whatwg
+02:05Hixie
+the original intent was to only dispatch it when hitting an entry that has been pushState()d
+02:06jlebar
+So it treats the first history entry for a document as one which was pushState()ed to.
+12 Aug 2009
+#whatwg
+11:39Hixie
+gsnedders|work: show me an implementation of pushState(). of <audio>. of UndoManager. of <script async>. of <iframe sandbox>.
+10 Aug 2009
+#whatwg
+22:52sicking
+Hixie, i.e. could clearState have any effect even if pushState has never been called?
+7 Aug 2009
+#whatwg
+00:13sicking
+but do need for pushState/localStorage
+00:15Hixie
+so pushState() isn't a problem here, because the popstate event is async
+24 Jan 2009
+#whatwg
+21:31Hixie
+pushState()
+18 Nov 2008
+#whatwg
+03:41sicking
+othermaciej, the reason is that I want to allow JSON "values" to be passed through a bunch of the DOM APIs, such as postMessage or pushState
+03:42othermaciej
+" I want to allow JSON "values" to be passed through a bunch of the DOM APIs, such as postMessage or pushState"
+03:44othermaciej
+sicking: anyway, I would make postMessage and pushState eventually use a string conversion algorithm which accepts either primitives or JSON-compatible objects, and deserialize on the other end
+5 Aug 2008
+#whatwg
+06:19Hixie
+aboodman2, othermaciej, it would be useful to have your input on the issues sicking has raised recently, like pushState() and the workers stuff
+06:20Hixie
+that one, and the thread on pushState() recently (which i just replied to -- i'll give you a link in a sec)
+06:23othermaciej
+Hixie: I saw the pushState thread
+21 May 2008
+#whatwg
+19:01annevk
+at some point i guess i will use pushState() and such
+16 Feb 2008
+#whatwg
+00:23Hixie
+so, not to drag the topic of conversation back to html5 or anything, but i think i'm gonna have to make it so documents in session history always know what the last state object (from pushState) that was activated on that document is
+15 Feb 2008
+#whatwg
+05:14
+» Hixie ponders how to make pushState() work when you cross them when the document isn't active
+05:17Hixie
+new browsing context, navigate to A. navigate to B. pushState B1, pushState B2. navigate to C.
+05:21Hixie
+hmm, pushState() as defined doesn't work right at all
+13 Sep 2007
+#whatwg
+18:34
+» dglazkov was looking at pushState spec and it looked strangely familiar
+6 Sep 2007
+#whatwg
+19:09
+» annevk needs history.pushState()
+10 Aug 2007
+#whatwg
+00:14Hixie
+anyone have an opinion on whether pushState() should take an absolute URI which the UA must then verify, or whether we should require that it be frefixed either with ? or with # and that it then replaces either the query part or the hash part?
+9 Aug 2007
+#whatwg
+21:19
+» Hixie starts looking at adding URIs and titles to pushState()
+21:29Hixie
+anyone have an opinion on whether pushState() should always require a URI or whether we should continue to allow state to be included without a URI?
+23 May 2007
+#whatwg
+22:32
+» Hixie ponders whether pushState() should always require a URI and title, or if it should allow state to be pushed without a URI
+25 Apr 2007
+#whatwg
+21:56Hixie
+othermaciej: yeah, there's a red box in there about it. i think pushState() will need two more arguments, URL and title
