@@ -22,18 +22,18 @@ If you wish to contribute to this repository, PRs are welcome.
 
 ### Research/write
 - vocalizing support for assistive technology (screen readers, specifically) in the same way we list browser support
-- modals (parent window inert, focus management) [[RFC Research]](dialogs/modals.md)
+- dialogs/modals (parent window inert, focus management) [[RFC Research]](dialogs/modals.md)
 - keyboard nav
 - focus management
 
 ## Documentation
-- [guides & developer education](guides.md)
+- [guides & developer education](documentation/guides.md)
 - a11y for the [emberjs.com guides](https://guides.emberjs.com/release/reference/accessibility-guide/) 
 - Add a11y check/section to RFC process
 - update ember-a11y website
  - add best practices for ember components
  - give helpful information for ember addons
+- better [linting](documentation/linting.md) 
 
 ## Addons and Support
-- better [linting](documentation/linting.md) 
 - ui addon with a11y-first approach
