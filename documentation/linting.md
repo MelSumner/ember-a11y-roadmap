@@ -22,6 +22,8 @@ For some accessibility criteria, it makes more sense to include them in the embe
 
 ## Practical Approach
 
+This is a bit of an update from the initial theorized approach. After some discussion, we believe that it will be useful to keep using ember-a11y-testing in addition to ember-template-lint, especially as ember-a11y-testing has improved their performance and should resolve the performance concerns. 
+
 ### Areas of focus
 
 In order to ensure that all of our community testing covers all facets of accessibility, we will use this strategy: 
