@@ -5,7 +5,7 @@ First, if you are not familiar with digital accessibility, please reference the 
 
 If you wish to contribute to this repository, PRs are welcome.
 
-## List of things we could improve 
+## Things we should improve 
 - the way routing works with screen readers
 - focus management
 - modals/popups/alerts
