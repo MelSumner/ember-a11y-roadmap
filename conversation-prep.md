@@ -2,11 +2,10 @@
 # Conversation Prep
 This document is intended to help prepare an Ember expert for a conversation about accessibility and assumes no prior knowledge. 
 
-This prep document is divided into three main sections: 
+This prep document is divided into two main sections: 
 
 1. Screen Reader Basics
-2. A11y in Ember
-3. Reference Materials & Additional Resources
+2. Reference Materials & Additional Resources
 
 ## Screen Reader Basics 
 
@@ -16,42 +15,6 @@ How a screen reader works
 - Read [“Semantics to Screen Readers”](https://alistapart.com/article/semantics-to-screen-readers) by Melanie Richards
 - Watch [“How A Screen Reader User Accesses The Web”](https://www.smashingmagazine.com/2019/02/accessibility-webinar/)  by Léonie Watson 
 - Be aware that there are pre-existing keyboard shortcuts- https://dequeuniversity.com/screenreaders/ 
-
-
-## A11y in Ember 
-
-This section has three sub-sections: 
-
-1. Routing 
-2. Modals
-3. Thinking about a roadmap 
-
-### Routing (in Ember)
-(presentation deck & thinking about solutions)
-
-Watch a short video that demonstrates the issue: https://youtu.be/Jr-de-YV4X0
-
-Other Existing Solutions
-We should review these approaches to see if they are feasible:
-
-- ember-a11y
-- ember-self-focused
-- reach-router
-
-### Modals (in Ember)
-
-Problem Statement and Research Document for Discussion: 
-“Supporting Accessible Modals in Ember”  
-
-Additional Reading/References:
-- Read [“Making Modal Windows Better for Everyone”](https://www.scottohara.me/blog/2016/09/07/revised-modal-window.html) by Scott O’Hara
-- https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/dialog.html
-- https://github.com/gdkraus/accessible-modal-dialog/blob/master/modal-window.js
-- Inert Polyfill https://github.com/WICG/inert
-
-### Research for an Accessibility Roadmap in Ember- Draft
-What could a roadmap or book of work look like for A11y in Ember?
-- https://github.com/MelSumner/ember-a11y-roadmap 
 
 ## Reference Materials & Additional Resources
 
