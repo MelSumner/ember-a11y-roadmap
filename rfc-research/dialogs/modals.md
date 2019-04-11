@@ -62,3 +62,9 @@ This could be an optional feature that the user opts into, the same way they opt
 - have an officially supported addon - ember-a11y-modal
 - screen for common failures through linting 
 
+## Additional Reading
+
+- Read [“Making Modal Windows Better for Everyone”](https://www.scottohara.me/blog/2016/09/07/revised-modal-window.html) by Scott O’Hara
+- https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/dialog.html
+- https://github.com/gdkraus/accessible-modal-dialog/blob/master/modal-window.js
+- Inert Polyfill https://github.com/WICG/inert
