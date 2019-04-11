@@ -35,5 +35,5 @@ If you wish to contribute to this repository, PRs are welcome.
  - give helpful information for ember addons
 - better [linting](documentation/linting.md) 
 
-## Addons and Support
+## Addons
 - ui addon with a11y-first approach
