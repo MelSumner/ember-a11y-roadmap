@@ -1,4 +1,4 @@
-# Linting
+# Linting & Testing
 
 To help provide developers with a better well-lit path to successfully build accessible Ember applications, we intend to take a multi-faceted approach. One of the facets of this approach is better lint messaging. 
 
