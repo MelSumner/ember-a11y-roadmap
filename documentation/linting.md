@@ -38,7 +38,8 @@ Repo: https://github.com/ember-template-lint/ember-template-lint
 - Issues should be formatted like this: https://github.com/ember-template-lint/ember-template-lint/issues/626 
 - PRs to address these issues must link to the specification, and not rules in other linting applications 
 - Mel will review each issue and assign to Rob for second review/merging
-- Since each new rule is considered a breaking change for semVer, we will batch a11y rules at reasonable intervals
+- Rules will be added as they are approved, but not turned on by default
+- Since adding rules to the recommended ruleset (on by default) is considered a breaking change for semVer, we will batch a11y rules at reasonable intervals
 
 #### ember-a11y-testing
 Repo: https://github.com/ember-a11y/ember-a11y-testing
