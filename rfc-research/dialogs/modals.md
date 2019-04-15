@@ -29,13 +29,12 @@ These are the areas that developers often fail to get modals correct. Incorrect 
 - modal content gets inserted dynamically in the wrong places (i.e., just inside of the body tag).
 - missing aria-* and role attributes
 
-## A possible solution
 If we were going to make this work, how _could_ we do it? 
 
+## One possible solution
 If we could solve anything in Ember natively, narrowing scope to the most common issue would be a reasonable approach. If possible, Ember could ensure that if a modal is open, the parent window is toggled to an inert state (often referred to as a "focus trap").
 
 ### The Inert Attribute
-
 There is a polyfill available for the `inert` HTML attribute (see [inert polyfill](https://github.com/WICG/inert)). Since Ember has already demonstrated a willingness to use polyfills when necessary, it seems reasonable that a polyfill that provides a much needed accessibility feature to the framework would be acceptable. 
 
 Try it out for yourself: https://wicg.github.io/inert/demo/ 
