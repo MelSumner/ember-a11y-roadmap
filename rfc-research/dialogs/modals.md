@@ -61,6 +61,7 @@ This could be an optional feature that the user opts into, the same way they opt
 ## Alternatives
 - have an officially supported addon - ember-a11y-modal
 - screen for common failures through linting 
+- instead, Ember could support keyboard events that can be restricted appropriately (idea from Trek)
 
 ## Additional Reading
 
