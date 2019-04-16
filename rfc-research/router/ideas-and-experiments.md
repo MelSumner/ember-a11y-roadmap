@@ -13,11 +13,14 @@ another issue is, focus setting needs to trace back to the click for security- i
 There maybe something we are doing with scheduling that is affecting it...Click has an elevated context, security wise. It can schedule things that inherit this - but if we do things that queue and schedule, we could mess that context up. But that would break things like people opening a popup, etc.
 
 ## Experiments and Results
-- Q. Does it have anything to do with scheduling?
-- A. No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
 
-- Q. Setting focus on body?
-- A. Setting focus on body DID fix the focus issue, but it didn't read out the new page content as we desired. 
+### Check the scheduling
+- Does it have anything to do with scheduling?
+- No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
+
+### Setting "container" focus
+- Setting focus on body?
+- Setting focus on body DID fix the focus issue, but it didn't read out the new page content as we desired. 
 
 We tried: 
 - setting focus on the body
