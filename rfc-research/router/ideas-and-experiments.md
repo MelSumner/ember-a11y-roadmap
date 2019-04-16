@@ -24,7 +24,55 @@ Installing Fastboot AND turning off JavaScript in the browser did produce the de
 ### Setting "container" focus
 - Body element focus: Setting focus on the `<body>` element DID move the focus, but it didn't read out the new page content as we desired. 
 - first div in the body: this also moved the focus but nothing was read out in the screen reader. 
-- Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page.
+- Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. However this only worked when we wrapped the code to set focus in a setTimeout function.
+
+So This Worked: 
+```
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+
+export default Route.extend({
+  router: service('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidChange', transition => {
+      if (document.activeElement) {
+        document.activeElement.blur();
+      }
+
+      if (transition.to !== null) {
+        setTimeout(function() {
+          document.body.querySelector('div').setAttribute("tabindex", "-1");
+          document.body.querySelector('div').focus();
+        }, 0);
+        
+      }
+    });
+  }
+});
+```
+This did not work: 
+```
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+
+export default Route.extend({
+  router: service('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidChange', transition => {
+      if (document.activeElement) {
+        document.activeElement.blur();
+      }
+
+      if (transition.to !== null) {
+          document.body.querySelector('div').setAttribute("tabindex", "-1");
+          document.body.querySelector('div').focus();        
+      }
+    });
+  }
+});
+```
 
 ### Questions to answer: 
 
