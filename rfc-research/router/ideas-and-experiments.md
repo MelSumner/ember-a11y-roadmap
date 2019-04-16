@@ -27,7 +27,7 @@ Installing Fastboot AND turning off JavaScript in the browser did produce the de
 - Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. However this only worked when we wrapped the code to set focus in a setTimeout function.
 
 So This Worked: 
-```
+```js
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
@@ -52,7 +52,7 @@ export default Route.extend({
 });
 ```
 This did not work: 
-```
+```js
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
