@@ -19,20 +19,9 @@ There maybe something we are doing with scheduling that is affecting it...Click 
 - No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
 
 ### Setting "container" focus
-- Setting focus on body?
-- Setting focus on body DID fix the focus issue, but it didn't read out the new page content as we desired. 
-
-We tried: 
-- setting focus on the body
-- setting focus on the first div in the body 
-
-```
-  document.body.querySelector('div').setAttribute("tabindex", "-1");
-  document.body.querySelector('div').focus();
-```
-
-- Q. Setting focus on an element that we know changed in the routes?
-- A. This worked. It read out the new content. 
+- Body element focus: Setting focus on the `<body>` element DID move the focus, but it didn't read out the new page content as we desired. 
+- first div in the body: this also moved the focus but nothing was read out in the screen reader. 
+- Setting focus on an element that we know changed in the routes: This worked. The screen reader read out the new content. In this case, we focused on the h1 for each page.
 
 ### Next question to answer: 
 
