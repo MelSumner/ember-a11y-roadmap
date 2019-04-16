@@ -1,5 +1,8 @@
 # Ideas
 
+## Looking at pushState
+We should figure out what went wrong with pushState- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would?
+
 ## Post Render
 maybe it needs to be done post render?
 
