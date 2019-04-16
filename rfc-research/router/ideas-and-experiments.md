@@ -26,7 +26,7 @@ Installing Fastboot AND turning off JavaScript in the browser did produce the de
 - first div in the body: this also moved the focus but nothing was read out in the screen reader. 
 - Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. However this only worked when we wrapped the code to set focus in a setTimeout function.
 
-So This Worked: 
+So This Worked (in application.js): 
 ```js
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
