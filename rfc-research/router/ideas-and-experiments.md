@@ -14,6 +14,9 @@ There maybe something we are doing with scheduling that is affecting it...Click 
 
 ## Experiments and Results
 
+### Static Rendering
+Installing Fastboot AND turning off JavaScript in the browser did produce the desired results- the page read out as expected with the screenreader.  
+
 ### Check the scheduling
 - Does it have anything to do with scheduling?
 - No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
