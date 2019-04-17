@@ -9,7 +9,7 @@
 Repo for app used: https://github.com/MelSumner/three-nine-zero
 
 ### Looking at pushState
-We should figure out what(if anything) went wrong with `pushState`- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would? Using https://codesandbox.io/s/github/rwjblue/screenreader-testing ([GitHub repo](https://github.com/rwjblue/screenreader-testing)), we can do some experimentation. 
+We should figure out what(if anything) went wrong with `pushState`- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would? Using https://codesandbox.io/s/github/rwjblue/screenreader-testing, we can do some experimentation ([GitHub repo here](https://github.com/rwjblue/screenreader-testing)). 
 
 ### Static Rendering
 Installing Fastboot AND turning off JavaScript in the browser did produce the desired results- the page read out as expected with the screenreader.  
