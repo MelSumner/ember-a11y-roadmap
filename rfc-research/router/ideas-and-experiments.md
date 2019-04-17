@@ -3,10 +3,12 @@
 ## Ideas 
 - review pushState
 - try some post render experiments to see what happens.
-- can we make the boundary of the outlet a little more exposed so we can use that? Can we use it even if it's not a little more exposed? What would it look like to "officially" focus on the first item in the outlet when the route transitions? (ember-a11y does this to some extent, but only relies on public API)
+- Could we make the boundary of the outlet a little more exposed so we can use that? 
+  - Could we use it even if it's not a little more exposed? 
+  - What would it look like to "officially" focus on the first item in the outlet when the route transitions? 
 
 ## Experiments and Results
-Repo for app used: https://github.com/MelSumner/three-nine-zero
+Repo for Ember app used: https://github.com/MelSumner/three-nine-zero
 
 ### Looking at pushState
 We should figure out what(if anything) went wrong with `pushState`- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would? Using https://codesandbox.io/s/github/rwjblue/screenreader-testing, we can do some experimentation ([GitHub repo here](https://github.com/rwjblue/screenreader-testing)). 
