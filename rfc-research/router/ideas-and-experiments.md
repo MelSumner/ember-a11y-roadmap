@@ -1,19 +1,15 @@
 # Ideas and Experiments
 
 ## Ideas 
-
-### Looking at pushState
-We should figure out what went wrong with pushState- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would?
-
-### Post Render
-maybe it needs to be done post render?
-
-### Thinking about focus and security
-another issue is, focus setting needs to trace back to the click for security- it needs to be tied to the user action. 
-There maybe something we are doing with scheduling that is affecting it...Click has an elevated context, security wise. It can schedule things that inherit this - but if we do things that queue and schedule, we could mess that context up. But that would break things like people opening a popup, etc.
+- review pushState
+- try some post render experiments to see what happens.
+- can we make the boundary of the outlet a little more exposed so we can use that? Can we use it even if it's not a little more exposed? What would it look like to "officially" focus on the first item in the outlet when the route transitions? (ember-a11y does this to some extent, but only relies on public API)
 
 ## Experiments and Results
 Repo for app used: https://github.com/MelSumner/three-nine-zero
+
+### Looking at pushState
+We should figure out what(if anything) went wrong with `pushState`- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would? Using https://codesandbox.io/s/github/rwjblue/screenreader-testing ([GitHub repo](https://github.com/rwjblue/screenreader-testing)), we can do some experimentation. 
 
 ### Static Rendering
 Installing Fastboot AND turning off JavaScript in the browser did produce the desired results- the page read out as expected with the screenreader.  
@@ -74,6 +70,7 @@ export default Route.extend({
   }
 });
 ```
+
 
 ### Questions to answer: 
 
