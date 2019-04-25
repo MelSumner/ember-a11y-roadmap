@@ -36,4 +36,6 @@ If you wish to contribute to this repository, PRs are welcome.
 - better [linting](documentation/linting.md) 
 
 ## Addons
-- ui addon with a11y-first approach
+ui addon with a11y-first approach
+
+- https://github.com/MelSumner/e-a11y-modal
