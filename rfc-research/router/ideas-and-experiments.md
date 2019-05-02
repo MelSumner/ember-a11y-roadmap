@@ -173,11 +173,12 @@ styles/app.css
     white-space: normal;
 }
 ```
+#### Considerations
+- how will this work if someone has also implemented skip links in their application?
+- how will this work if someone has manually focused an element?
+- how will this work with internationalization?
 
 
+### Questions to answer/Experiments to try 
 
-### Questions to answer: 
-
-Does the screen reader have some sort of dom cache, where if we pass it the same element with new content, it doesn't read it out because it thinks it's the same element/content? 
-
-If this is true, then the next thing to try would be to see if we could find a way to set the focus on the first element in the newly rendered outlet.
+Q: Does the screen reader have some sort of dom cache, where if we pass it the same element with new content, it doesn't read it out because it thinks it's the same element/content? If so, could we find a way to set the focus on the first element in the newly rendered outlet? 
