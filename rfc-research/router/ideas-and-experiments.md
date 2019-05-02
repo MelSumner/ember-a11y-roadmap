@@ -20,7 +20,7 @@ Installing Fastboot AND turning off JavaScript in the browser did produce the de
 - Does it have anything to do with scheduling?
 - No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
 
-### Setting "container" focus
+### Experiment: Setting "container" focus
 - Body element focus: Setting focus on the `<body>` element DID move the focus, but it didn't read out the new page content as we desired. 
 - first div in the body: this also moved the focus but nothing was read out in the screen reader. 
 - Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. However this only worked when we wrapped the code to set focus in a setTimeout function.
@@ -73,7 +73,7 @@ export default Route.extend({
 });
 ```
 
-### Adding route navigation message
+### Experiment: Adding route navigation message
 > The first thing you learn to do as a screen-reader user, is make the screen reader stop talking. 
 
 #### The idea 
