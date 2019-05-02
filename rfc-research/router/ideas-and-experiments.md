@@ -130,7 +130,6 @@ export default Route.extend({
 
       if (transition.to !== null) {
         setTimeout(function() {
-          document.body.querySelector('#nav-message').setAttribute("tabindex", "-1");
           document.body.querySelector('#nav-message').focus();
         }, 0);        
       }
