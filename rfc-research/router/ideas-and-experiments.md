@@ -92,7 +92,9 @@ In our [test app](https://github.com/MelSumner/three-nine-zero), edits were made
 templates/application.hbs:
 
 ```hbs
-<div tabindex="-1" class="ember-sr-only sr-only-focusable" id="nav-message">Navigation to {{this.currentURL}} is complete. You may now navigate as you wish.</div>
+<div tabindex="-1" class="ember-sr-only sr-only-focusable" id="nav-message">
+  Navigation to {{this.currentURL}} is complete. You may now navigate as you wish.
+</div>
 ```
 
 controller/application.js: 
