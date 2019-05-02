@@ -79,6 +79,8 @@ export default Route.extend({
 #### The idea 
 what if we can add a message to the screen reader user, letting them know that the page (route) transition has occurred successfully, and they can now navigate as they wish? 
 
+A similar idea is skip links, so it would be best to familiarize yourself with the concept: [https://webaim.org/techniques/skipnav/](https://webaim.org/techniques/skipnav/).
+
 #### Implementation
 In our [test app](https://github.com/MelSumner/three-nine-zero), edits were made to four files (code below):
 
