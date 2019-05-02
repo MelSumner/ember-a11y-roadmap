@@ -177,6 +177,7 @@ styles/app.css
 - how will this work if someone has also implemented skip links in their application?
 - how will this work if someone has manually focused an element?
 - how will this work with internationalization?
+- what about sub-routes?
 
 
 ### Questions to answer/Experiments to try 
