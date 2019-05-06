@@ -2,6 +2,7 @@
 
 ## Ideas 
 - [x] review pushState
+- [x] check the scheduling- are there some async shenanigans going on? 
 - [x] try some post render experiments to see what happens
 - [ ] Could we make the boundary of the outlet a little more exposed so we can use that? 
   - Could we use it even if it's not a little more exposed? 
@@ -14,12 +15,14 @@ Repo for Ember app used: https://github.com/MelSumner/three-nine-zero
 ### Looking at pushState
 We should figure out what(if anything) went wrong with `pushState`- thinking back, we thought it was going to be fine for a11y. Was it implemented poorly, or did the design not deliver what we thought it would? Using https://codesandbox.io/s/github/rwjblue/screenreader-testing, we can do some experimentation ([GitHub repo here](https://github.com/rwjblue/screenreader-testing)). 
 
-### Static Rendering
-Installing Fastboot AND turning off JavaScript in the browser did produce the desired results- the page read out as expected with the screenreader.  
-
 ### Check the scheduling
 - Does it have anything to do with scheduling?
 - No. We confirmed this by stepping through with the debugger and the transition is definitely on the same stack with no async calls. Nothing was scheduled. 
+
+### Experiment: Evaluate Static Rendering
+What about Fastboot? Does that help?
+
+Simply installing Fastboot wasn't enough. Installing Fastboot **AND** turning off JavaScript in the browser produced the desired results- the page read out as expected with the screenreader.  
 
 ### Experiment: Setting "container" focus
 - Body element focus: Setting focus on the `<body>` element DID move the focus, but it didn't read out the new page content as we desired. 
