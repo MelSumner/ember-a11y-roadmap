@@ -57,6 +57,10 @@ Implementing `inert` as a low-level primitive in Ember would not only provide a 
 
 This could be an optional feature that the user opts into, the same way they opt into removing the application template wrapper. 
 
+## Drawbacks
+- Inert has to be used as a polyfill right now- browser vendor implementation seems to be stalled
+- The [Issues](https://github.com/WICG/inert/issues) with inert should be considered 
+
 ## Alternatives
 - have an officially supported addon - ember-a11y-modal
 - screen for common failures through linting 
