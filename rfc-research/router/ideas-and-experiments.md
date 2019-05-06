@@ -178,10 +178,15 @@ styles/app.css
     white-space: normal;
 }
 ```
-#### Considerations
+#### Unresolved questions
 - how will this work if someone has also implemented skip links in their application?
 - how will this work if someone has manually focused an element?
 - how will this work with internationalization?
 - what about sub-routes?
 
-**I created an addon for us to try out: [https://github.com/MelSumner/ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus).** 
+#### Results: 
+- I created an addon to demonstrate this functionality: [https://github.com/MelSumner/ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus)
+- this addon was published to NPM, and used in an app for demonstration purposes: https://navigator-message-test-app.netlify.com 
+
+
+
