@@ -62,9 +62,9 @@ This could be an optional feature that the user opts into, the same way they opt
 - The [Issues](https://github.com/WICG/inert/issues) with inert should be considered 
 
 ## Alternatives
-- have an officially supported addon - ember-a11y-modal
+- have an officially supported addon - [e-a11y-modal](https://github.com/melsumner/e-a11y-modal)
 - screen for common failures through linting 
-- instead, Ember could support keyboard events that can be restricted appropriately (idea from Trek)
+- Ember could support keyboard events that can be restricted appropriately (ht to Trek for the idea)
 
 ## Additional Reading
 
