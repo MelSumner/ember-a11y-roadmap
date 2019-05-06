@@ -188,5 +188,6 @@ styles/app.css
 - I created an addon to demonstrate this functionality: [https://github.com/MelSumner/ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus)
 - this addon was published to NPM, and used in an app for demonstration purposes: https://navigator-message-test-app.netlify.com 
 
-
+Screenshot of the app with NVDA speech viewer overlay: 
+![](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/screenshots/Screenshot%202019-05-06%2011.43.31.png)
 
