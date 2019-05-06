@@ -191,3 +191,8 @@ styles/app.css
 Screenshot of the app with NVDA speech viewer overlay: 
 ![](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/screenshots/Screenshot%202019-05-06%2011.43.31.png)
 
+### Experiment: Outlets and Nodes
+
+- [ ] look at `Range.selectNodeContents()` - would that would set active without forcing layout?
+
+
