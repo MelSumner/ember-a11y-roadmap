@@ -2,6 +2,8 @@
 While we may wish we lived in a world where modals did not exist, they do; despite our best effort, sometimes they must be used. We will review the ways modals should work, some common pain points for developers and users with assistive technology, and list some ways that we could potentially improve the developer ergonomics in this area. 
 
 ## Intro to some terminology  
+
+### Types of Modals/Dialogs
 There are two types of modals: 
 - [Dialog(Modal)](https://www.w3.org/TR/wai-aria-practices/#dialog_modal)
 - [Alert and Message Dialogs](https://www.w3.org/TR/wai-aria-practices/#alertdialog)
