@@ -194,9 +194,16 @@ Screenshot of the app with NVDA speech viewer overlay:
 ### Experiment: Outlets and Nodes
 Is there some way to identify the boundaries of the route's outlet, and then set focus on the first node/element inside of it?
 
+Working Notes:
+
 - [ ] look at `Range.selectNodeContents()` - would that would set active without forcing layout?
   - `window.getSelection().addRange(range)`
 - [ ] does this have to happen in Glimmer? 
-  
+- component vs componentManager
+- why does glimmer need a special method for an outlet view instead of appending to the dom?
+- could an outlet be implemented as a totally normal component? why or why not?
+- tagless- `getViewBounds` are dom nodes
+- "the route has already resolved the template" what does "resolved" mean?
+
 
 
