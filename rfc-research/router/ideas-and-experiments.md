@@ -180,7 +180,8 @@ styles/app.css
 - how will this work with internationalization?
 - what about sub-routes?
 
+**I created an addon for us to try out: [https://github.com/MelSumner/ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus).** 
 
 ### Questions to answer/Experiments to try 
 
-Q: Does the screen reader have some sort of dom cache, where if we pass it the same element with new content, it doesn't read it out because it thinks it's the same element/content? If so, could we find a way to set the focus on the first element in the newly rendered outlet? 
+Q: Does the screen reader have some sort of dom cache, where if we pass it the same element with new content, it doesn't read it out because it thinks it's the same element/content? If so, could we find a way to set the focus on the first element in the newly rendered outlet? `getViewBounds` or something like that? 
