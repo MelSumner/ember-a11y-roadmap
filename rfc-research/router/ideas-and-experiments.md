@@ -4,9 +4,7 @@
 - [x] review pushState
 - [x] check the scheduling- are there some async shenanigans going on? 
 - [x] try some post render experiments to see what happens
-- [ ] Could we make the boundary of the outlet a little more exposed so we can use that? 
-  - Could we use it even if it's not a little more exposed? 
-  - What would it look like to "officially" focus on the first item in the outlet when the route transitions?
+- [ ] What would it look like to focus on the first item in the outlet when the route transitions?
 - [x] What about a message that says "navigation to (URL) is complete"  
 
 ## Experiments and Results
@@ -203,6 +201,7 @@ Working Notes:
 - why does glimmer need a special method for an outlet view instead of appending to the dom?
 - tagless- `getViewBounds` are dom nodes
 - "the route has already resolved the template" what does "resolved" mean?
+
 
 
 
