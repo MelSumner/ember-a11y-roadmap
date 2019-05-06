@@ -1,11 +1,12 @@
 # Ideas and Experiments
 
 ## Ideas 
-- review pushState
-- try some post render experiments to see what happens.
-- Could we make the boundary of the outlet a little more exposed so we can use that? 
+- [x] review pushState
+- [x] try some post render experiments to see what happens
+- [ ] Could we make the boundary of the outlet a little more exposed so we can use that? 
   - Could we use it even if it's not a little more exposed? 
-  - What would it look like to "officially" focus on the first item in the outlet when the route transitions? 
+  - What would it look like to "officially" focus on the first item in the outlet when the route transitions?
+- [x] What about a message that says "navigation to (URL) is complete"  
 
 ## Experiments and Results
 Repo for Ember app used: https://github.com/MelSumner/three-nine-zero
@@ -23,7 +24,7 @@ Installing Fastboot AND turning off JavaScript in the browser did produce the de
 ### Experiment: Setting "container" focus
 - Body element focus: Setting focus on the `<body>` element DID move the focus, but it didn't read out the new page content as we desired. 
 - first div in the body: this also moved the focus but nothing was read out in the screen reader. 
-- Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. However this only worked when we wrapped the code to set focus in a setTimeout function.
+- Setting focus on an element that we know changed in the routes: **This worked.** The screen reader read out the new content. In this case, we focused on the h1 for each page. _However, this only worked when we wrapped the code to set focus in a setTimeout function._
 
 This Worked (in application.js): 
 ```js
@@ -181,7 +182,3 @@ styles/app.css
 - what about sub-routes?
 
 **I created an addon for us to try out: [https://github.com/MelSumner/ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus).** 
-
-### Questions to answer/Experiments to try 
-
-Q: Does the screen reader have some sort of dom cache, where if we pass it the same element with new content, it doesn't read it out because it thinks it's the same element/content? If so, could we find a way to set the focus on the first element in the newly rendered outlet? `getViewBounds` or something like that? 
