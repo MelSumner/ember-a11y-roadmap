@@ -67,6 +67,7 @@ This could be an optional feature that the user opts into, the same way they opt
 - have an officially supported addon - [e-a11y-modal](https://github.com/melsumner/e-a11y-modal)
 - screen for common failures through linting 
 - Ember could support keyboard events that can be restricted appropriately (ht to Trek for the idea)
+- is there some way that Ember could implement some version of the inert idea??
 
 ## Additional Reading
 
