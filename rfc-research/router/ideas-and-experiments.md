@@ -198,10 +198,9 @@ Working Notes:
 
 - [ ] look at `Range.selectNodeContents()` - would that would set active without forcing layout?
   - `window.getSelection().addRange(range)`
-- [ ] does this have to happen in Glimmer? 
+- [ ] could an outlet be implemented as a totally normal component? why or why not?
 - component vs componentManager
 - why does glimmer need a special method for an outlet view instead of appending to the dom?
-- could an outlet be implemented as a totally normal component? why or why not?
 - tagless- `getViewBounds` are dom nodes
 - "the route has already resolved the template" what does "resolved" mean?
 
