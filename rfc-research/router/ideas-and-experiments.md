@@ -192,7 +192,11 @@ Screenshot of the app with NVDA speech viewer overlay:
 ![](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/screenshots/Screenshot%202019-05-06%2011.43.31.png)
 
 ### Experiment: Outlets and Nodes
+Is there some way to identify the boundaries of the route's outlet, and then set focus on the first node/element inside of it?
 
 - [ ] look at `Range.selectNodeContents()` - would that would set active without forcing layout?
+  - `window.getSelection().addRange(range)`
+- [ ] does this have to happen in Glimmer? 
+  
 
 
