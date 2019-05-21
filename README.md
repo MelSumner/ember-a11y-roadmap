@@ -13,6 +13,7 @@ If you wish to contribute to this repository, PRs are welcome.
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
 - linting
 - ember language server support
+- improved support for aria-* attributes
 
 ## RFCs 
 
