@@ -1,6 +1,10 @@
 # Linting & Testing
 
-To help provide developers with a better well-lit path to successfully build accessible Ember applications, we intend to take a multi-faceted approach. One of the facets of this approach is better lint messaging. 
+To help provide developers with a better well-lit path to successfully build accessible Ember applications, we intend to take a multi-faceted approach. 
+
+- continue to improve and support accessibility testing 
+- improve linting tools
+- improve IDE tools
 
 ## Improving what exists
 
@@ -45,5 +49,9 @@ Repo: https://github.com/ember-template-lint/ember-template-lint
 Repo: https://github.com/ember-a11y/ember-a11y-testing
 
 - we will add Dependabot or Renovate in order to ensure that this addon is kept up-to-date
+
+## Other ideas
+
+- turn http://adrianroselli.com/2019/04/reading-order-bookmarklet.html into an Ember testing addon where the build can configured to fail if logical reading order fails.
 
 
