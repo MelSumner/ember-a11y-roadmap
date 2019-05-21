@@ -8,3 +8,11 @@ The goal of this work is to add reasonable rules to ember-template-lint, to bett
   - [x] rule has a PR (https://github.com/ember-template-lint/ember-template-lint/pull/624)
   - [x] PR has been reviewed
   - [ ] rule has been merged
+- no-abstract-roles
+  - [x] rule has a PR (https://github.com/ember-template-lint/ember-template-lint/pull/628)
+  - [x] PR has been reviewed
+  - [ ] rule has been merged
+- no-unsupported-elements
+  - [x] rule has a PR
+  - [ ] PR has been reviewed
+  - [ ] rule has been merged
