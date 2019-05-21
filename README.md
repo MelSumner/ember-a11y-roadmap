@@ -34,7 +34,7 @@ If you wish to contribute to this repository, PRs are welcome.
 - update ember-a11y website
  - add best practices for ember components
  - give helpful information for ember addons
-- better [linting](documentation/linting.md) 
+- improved [developer experience](linting-and-testing/approach.md) 
 
 ## Addons
 ui addon with a11y-first approach
