@@ -10,6 +10,8 @@ To help provide developers with a better well-lit path to successfully build acc
 
 We intend to improve the messaging already provided through the [`ember-template-lint`](https://github.com/ember-template-lint/ember-template-lint/) addon. 
 
+We will need to plan a different way to lint CSS. 
+
 ### Improving Linting Error messages: 
 
 - compare rules already available through axe-core. 
