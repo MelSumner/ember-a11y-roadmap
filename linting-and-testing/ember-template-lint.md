@@ -4,15 +4,7 @@ The goal of this work is to add reasonable rules to ember-template-lint, to bett
 
 ## to-do
 
-- alt-text
-  - [x] rule has a PR (https://github.com/ember-template-lint/ember-template-lint/pull/624)
-  - [x] PR has been reviewed
-  - [ ] rule has been merged
-- no-abstract-roles
-  - [x] rule has a PR (https://github.com/ember-template-lint/ember-template-lint/pull/628)
-  - [x] PR has been reviewed
-  - [ ] rule has been merged
-- no-unsupported-elements
-  - [x] rule has a PR
-  - [ ] PR has been reviewed
-  - [ ] rule has been merged
+| Rule   |      Issue URL      |  Date | Resolved |
+|----------|-------------|------|------|
+| required-context-role |  https://github.com/ember-template-lint/ember-template-lint/issues/626 | 23Jan19 | <ul><li>[ ] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
+| no-abstract-roles | https://github.com/ember-template-lint/ember-template-lint/issues/625 | 23Jan19 |  <ul><li>[ ] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
