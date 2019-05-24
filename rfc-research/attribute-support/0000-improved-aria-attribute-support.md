@@ -35,7 +35,6 @@ This is a sentence in three parts. The three parts of this sentence matter- If I
 
 We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
 
-
 ## How we teach this
 
 There are some `aria` attributes that can receive multiple values. Since this order can matter (the same way the order of `class` attribute values can matter for CSS), Ember will respect the order that you define the values for these attributes. 
@@ -47,6 +46,7 @@ There are some `aria` attributes that can receive multiple values. Since this or
 ## Alternatives
 
 - implement only the two most common ones- `aria-labelledby` and `aria-describedby`
+- re-write the entire feature to give more granular control
 
 ## Unresolved questions
 
