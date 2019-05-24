@@ -45,7 +45,7 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 ## Alternatives
 
-- implement only the two most common ones- `aria-labelledby` and `aria-describedby`
+- implement exceptions for only the two most common ones- `aria-labelledby` and `aria-describedby`
 - re-write the entire feature to give more granular control
 
 ## Unresolved questions
