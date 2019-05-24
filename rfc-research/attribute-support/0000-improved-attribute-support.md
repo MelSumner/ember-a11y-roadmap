@@ -11,17 +11,43 @@ Ember should provide better support for aria attributes as part of the framework
 
 ## Motivation
 
-Right now, aria-* attributes are not well-supported in Ember.
+Right now, `aria-*` attributes are not well-supported in Ember. While [RFC #435](https://github.com/emberjs/rfcs/pull/435) provided support for forwarding element modifiers with "splattributes", it did not provide the necessary support for aria-attributes- especially the ones that accept multiple attribute values and for whom the order matters. Additionally, Ember could more sensibly support some `aria-*` attributes to improve the developer experience.  
 
 ## Detailed design
 
-> This is the bulk of the RFC.
+### Improve attribute value merging 
 
-> Explain the design in enough detail for somebody
-familiar with the framework to understand, and for somebody familiar with the
-implementation to implement. This should get into specifics and corner-cases,
-and include examples of how the feature is used. Any new terminology should be
-defined here.
+Right now, the `class` attribute is the only attribute that receives an exception to the default attribute merging rules. However, there are six `aria` attributes in the accessibility specification whose value is an ID reference list (meaning, they can have one or more values):
+
+- [aria-controls](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-controls)
+- [aria-describedby](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-describedby)
+- [aria-flowto](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-flowto) 
+- [aria-labelledby](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-labelledby) 
+- [aria-owns](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-owns) 
+
+Since this order can matter, the author should be able to provide that order themselves.
+
+Example (rendered): 
+```html
+
+<label for="special_instructions">
+    Special instructions:
+</label>
+<input id="special_instructions"
+       type="text"
+       aria-describedby="special_instructions_desc-1 special_instructions_desc-2"
+       class="wide_input">
+<div class="help_text" id="special_instructions_desc-1">
+  For example, gate code or other information to help the driver find you
+</div>
+<div class="help_text" id="special_instructions_desc-2">
+  More special instructions here (maybe they came from a different place, or this is where the error text will show up).
+</div>
+```
+
+### Improve attributes 
+
+
 
 ## How we teach this
 
