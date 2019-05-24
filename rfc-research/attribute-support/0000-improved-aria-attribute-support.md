@@ -27,7 +27,7 @@ Right now, the `class` attribute is the only attribute that receives an exceptio
 
 Since this order can matter, the author should be able to specify that order themselves - the same way they can currently specify the values for the `class` attribute.
 
-An Example: 
+An Example (note the `aria-describedby` attribute on the `input` element): 
 
 ```html
 <label for="special_instructions">
