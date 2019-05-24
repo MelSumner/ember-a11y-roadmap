@@ -27,23 +27,14 @@ Right now, the `class` attribute is the only attribute that receives an exceptio
 
 Since this order can matter, the author should be able to specify that order themselves - the same way they can currently specify the values for the `class` attribute.
 
-An Example (note the `aria-describedby` attribute on the `input` element): 
+Think about it in this way: 
 
-```html
-<label for="special_instructions">
-    Special instructions:
-</label>
-<input id="special_instructions"
-       type="text"
-       aria-describedby="special_instructions_desc-1 special_instructions_desc-2"
-       class="wide_input">
-<div class="help_text" id="special_instructions_desc-1">
-  For example, gate code or other information to help the driver find you
-</div>
-<div class="help_text" id="special_instructions_desc-2">
-  More special instructions here (maybe they came from a different place, or this is where the error text will show up).
-</div>
-```
+(The cat) (ran) (to me)
+
+This is a sentence in three parts. The three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense (unless I was Yoda). 
+
+We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
+
 
 ## How we teach this
 
@@ -51,11 +42,11 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 ## Drawbacks
 
-TBD
+- we are adding more exceptions to the rule. Usually something we try to avoid. 
 
 ## Alternatives
 
-I have not yet identified any alternative methods to implementing this RFC.
+- implement only the two most common ones- `aria-labelledby` and `aria-describedby`
 
 ## Unresolved questions
 
