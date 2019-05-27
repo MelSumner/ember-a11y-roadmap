@@ -107,7 +107,7 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 ## Drawbacks
 
-- we are adding more exceptions to the rule. Usually something we try to avoid. 
+- we are adding more exceptions to the rule. 
 
 ## Alternatives
 
