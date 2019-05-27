@@ -1,3 +1,9 @@
+This issue: https://github.com/emberjs/ember.js/issues/17692#issuecomment-469378810
+Led to the creation of this RFC issue: https://github.com/emberjs/rfcs/issues/476
+This RFC attempts to address the issues laid out in that RFC.
+
+==========================================================================================================================
+
 - Start Date: (fill me in with today's date, YYYY-MM-DD)
 - Relevant Team(s): (fill this in with the [team(s)](README.md#relevant-teams) to which this RFC applies)
 - RFC PR: (after opening the RFC PR, update this with a link to it and update the file name)
