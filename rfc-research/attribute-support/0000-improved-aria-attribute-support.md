@@ -17,7 +17,7 @@ Ember should provide better support for aria attributes as part of the framework
 
 ## Motivation
 
-Right now, `aria-*` attributes are not well-supported in Ember. While [RFC #435](https://github.com/emberjs/rfcs/pull/435) provided support for forwarding element modifiers with "splattributes", it did not provide the necessary support for aria-attributes- especially the ones that accept multiple attribute values and for whom the order matters. 
+Right now, `aria-*` attributes _that can receive multiple values, **and** for whom the order of those values matter_, are not well-supported in Ember. While [RFC #435](https://github.com/emberjs/rfcs/pull/435) provided support for forwarding element modifiers with "splattributes", it did not provide the necessary support for these `aria` attributes.
 
 ## Detailed design
 
