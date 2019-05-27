@@ -135,7 +135,7 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 - implement exceptions for only the two most common ones- `aria-labelledby` and `aria-describedby`
 - re-write the entire feature to give more granular control
-- update the guides to include scenario 3 as just the way it works.
+- update the guides to include scenario 3 as just the way it works. [PR 822](https://github.com/ember-learn/guides-source/pull/822)
 
 ## Unresolved questions
 
