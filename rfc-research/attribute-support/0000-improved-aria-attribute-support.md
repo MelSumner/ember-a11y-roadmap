@@ -116,4 +116,4 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 ## Unresolved questions
 
-TBD
+- Are there other attributes that both accept multiple values and also for who that value order matters?
