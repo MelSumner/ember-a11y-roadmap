@@ -23,12 +23,15 @@ Right now, `aria-*` attributes _that can receive multiple values, **and** for wh
 
 ### Improve attribute value merging 
 
-Right now, the `class` attribute is the only attribute that receives an exception to the default attribute merging rules. However, there are five `aria` attributes in the accessibility specification whose value is an ID reference list (meaning, they can have one or more values):
+Right now, the `class` attribute is the only attribute that receives an exception to the default attribute merging rules. However, there are five `aria` attributes in the accessibility specification whose value is an ID reference list (meaning, they can have one or more values). We could also break it down further: Order **definitely** matters and the use case is common, and order **could** matter but use case is less common. 
 
-- [aria-controls](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-controls)
+Used often: 
 - [aria-describedby](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-describedby)
-- [aria-flowto](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-flowto) 
 - [aria-labelledby](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-labelledby) 
+
+Used less often:
+- [aria-flowto](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-flowto) 
+- [aria-controls](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-controls)
 - [aria-owns](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-owns) 
 
 Since this order can matter, the author should be able to specify that order themselves - the same way they can currently specify the values for the `class` attribute.
