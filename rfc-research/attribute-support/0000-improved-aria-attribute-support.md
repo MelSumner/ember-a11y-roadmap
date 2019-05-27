@@ -36,13 +36,70 @@ Used less often:
 
 Since this order can matter, the author should be able to specify that order themselves - the same way they can currently specify the values for the `class` attribute.
 
-Think about it in this way: 
+Think about it in this way. This is a sentence in three parts:
 
 (The cat) (ran) (to me)
 
-This is a sentence in three parts. The three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense (unless I was Yoda). 
+The order of the three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense (unless I was Yoda). We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
 
-We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
+Right now, the position of `...attributes` indicates whether or not an attribute value can be overridden:
+
+```hbs
+<div data-foo="inner" ...attributes></div>
+<div ...attributes data-foo="inner"></div>
+```
+With this invocation:
+
+```hbs
+<Foo data-foo="outer" />
+```
+
+We expect the location of `...attributes` to affect the final result:
+
+```hbs
+<div data-foo="outer"></div>
+<div data-foo="inner"></div>
+```
+
+That is, *unless* it is the class attribute. 
+
+If we wrote this: 
+
+```hbs
+<div data-foo="inner" class="red" ...attributes>
+```
+
+With this invocation:
+
+```hbs
+<Foo class="blue" />
+```
+
+The `...attribute` placement will effect the way the (CSS) classes are ordered: 
+
+```hbs
+<div data-foo="inner" class="red blue">
+```
+
+Now, if we had written this:
+```hbs
+<div data-foo="inner" ...attributes class="red">
+```
+
+With this invocation:
+
+```hbs
+<Foo class="blue" />
+```
+
+The `...attribute` placement BEFORE the `class` attribute will cause the classes to be ordered differently:
+
+```hbs
+<div data-foo="inner" class="blue red">
+```
+
+For the `aria` attributes in this RFC, the expectation is that they would work the same way as the `class` attribute. 
+
 
 ## How we teach this
 
