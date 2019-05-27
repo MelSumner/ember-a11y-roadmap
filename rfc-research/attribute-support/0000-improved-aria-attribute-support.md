@@ -61,7 +61,7 @@ We expect the location of `...attributes` to affect the final result:
 <div data-foo="inner"></div>
 ```
 
-That is, *unless* it is the class attribute. 
+That is, *unless* it is the `class` attribute. With the `class` attribute, placement of `...attributes` indicates the order in which the values should be merged.
 
 If we wrote this: 
 
