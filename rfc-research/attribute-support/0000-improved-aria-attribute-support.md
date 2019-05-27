@@ -135,7 +135,7 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 - implement exceptions for only the two most common ones- `aria-labelledby` and `aria-describedby`
 - re-write the entire feature to give more granular control
-- update the guides to inform users that for these `aria` attributes, they must make it so they can always be overridden, and ensure that developers understand that multiple values can be provided **and** that the order matters. 
+- update the guides to include scenario 3 as just the way it works.
 
 ## Unresolved questions
 
