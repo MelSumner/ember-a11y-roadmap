@@ -103,7 +103,9 @@ Component:
 ```hbs
 <label for="input" class="form-label">{{@input-label}}</label>
 <input type="text" id="input" aria-describedby="text-help-0" ...attributes />
-<span class="text-help" id="text-help-0">Password Requirements: Must contain at least one letter and one number.</span>
+<span class="text-help" id="text-help-0">
+  Password Requirements: Must contain at least one letter and one number.
+</span>
 ```
 
 Invocation: 
