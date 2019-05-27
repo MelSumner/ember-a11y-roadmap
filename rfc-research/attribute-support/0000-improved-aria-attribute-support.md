@@ -42,69 +42,80 @@ This is a sentence in three parts:
 
 The order of the three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense. We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
 
-Right now, the position of `...attributes` indicates whether or not an attribute value can be overridden:
+Right now, the position of `...attributes` indicates whether or not an attribute value can be overridden. This is, with the exception of class. The position of the `class` attribute indicates the order of the values. 
+
+### Scenario 1
+
+Here's what happens if I create a `my-input` component that uses the `aria-describedby` attribute with multiple values. In this contrived example, I'm setting up a input where the user can set a password. I'll use help text to give the user additional informatiuon about what the password needs to include: 
 
 ```hbs
-<div data-foo="inner" ...attributes></div>
-<div ...attributes data-foo="inner"></div>
+<label for="input" class="form-label" ...attributes>{{@input-label}}</label>
+<input type="text" id="input" ...attributes aria-describedby="text-help-0"  />
+<span class="text-help" id="text-help-0">Password Requirements: Must contain at least one letter and one number.</span>
 ```
 With this invocation:
 
 ```hbs
-<Foo data-foo="outer" />
+  <MyInput @input-label="Password" aria-describedby="text-help-0 text-help-1" />
+  <span class="text-help" id="text-help-1">Must also include a special character.</span>
 ```
 
-We expect the location of `...attributes` to affect the final result:
+We expect the location of `...attributes` to affect the final result- and it does. `aria-describedby` only has one value, `text-help-0`: 
 
 ```hbs
-<div data-foo="outer"></div>
-<div data-foo="inner"></div>
+  <input id="input" aria-describedby="text-help-0" type="text">
 ```
+The other isn't associated with the input. This means that the sighted user will see all of the help text. The user with a screen reader will only receive part of the instructions, leaving them unable to complete the task. 
 
-That is, *unless* it is the `class` attribute. With the `class` attribute, placement of `...attributes` indicates the order in which the values should be merged.
-
-If we wrote this: 
+### Scenario 2
+However, if we moved the position of the `...attributes` in our component: 
 
 ```hbs
-<div data-foo="inner" class="red" ...attributes>
+<input type="text" id="input" aria-describedby="text-help-0"  ...attributes />
 ```
 
-With this invocation:
+With the same invocation:
 
 ```hbs
-<Foo class="blue" />
+  <MyInput @input-label="Password" aria-describedby="text-help-1" />
+  <span class="text-help" id="text-help-1">Must also include a special character.</span>
 ```
 
-The `...attribute` placement will effect the way the (CSS) classes are ordered: 
-
+We will get this result: 
 ```hbs
-<div data-foo="inner" class="red blue">
+  <input id="input" aria-describedby="text-help-1" type="text">
 ```
 
-Now, if we had written this:
+The `...attribute` placement has made it so the `aria-describedby` value has been completely replaced, not appended.  
+
+### Scenario 3
+
+The workaround is to know what the `aria-describedby` value is in the component, and make sure that both are declared when the component is invoked:
+
+Component: 
 ```hbs
-<div data-foo="inner" ...attributes class="red">
+<label for="input" class="form-label">{{@input-label}}</label>
+<input type="text" id="input" aria-describedby="text-help-0" ...attributes />
+<span class="text-help" id="text-help-0">Password Requirements: Must contain at least one letter and one number.</span>
 ```
 
-With this invocation:
-
+Invocation: 
 ```hbs
-<Foo class="blue" />
+  <MyInput @input-label="Password" aria-describedby="text-help-0 text-help-1" />
+  <span class="text-help" id="text-help-1">Must also include a special character.</span>
 ```
 
-The `...attribute` placement BEFORE the `class` attribute will cause the classes to be ordered differently:
-
+Result: 
 ```hbs
-<div data-foo="inner" class="blue red">
+  <input id="input" aria-describedby="text-help-0 text-help-1" type="text">
 ```
 
-For the `aria` attributes in this RFC, the expectation is that they would work the same way as the `class` attribute. 
-
-
+However, For the `aria` attributes in this RFC, the expectation is that they would work the same way as the `class` attribute. The descrepancy will cause developer confusion. 
 
 
 ## How we teach this
 
+We can add a section to the guides: 
 There are some `aria` attributes that can receive multiple values. Since this order can matter (the same way the order of `class` attribute values can matter for CSS), Ember will respect the order that you define the values for these attributes. 
 
 ## Drawbacks
