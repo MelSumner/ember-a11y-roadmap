@@ -46,25 +46,32 @@ Right now, the position of `...attributes` indicates whether or not an attribute
 
 ### Scenario 1
 
-Here's what happens if I create a `my-input` component that uses the `aria-describedby` attribute with multiple values. In this contrived example, I'm setting up a input where the user can set a password. I'll use help text to give the user additional informatiuon about what the password needs to include: 
+Here's what happens if I create a `my-input` component that uses the `aria-describedby` attribute with multiple values. In this contrived example, I'm setting up a input where the user can set a password. I'll use help text to give the user additional informatiuon about what the password needs to include. However, developer who is using my component to implement the requirements for their product wants to add additional help text. 
+
+Component:
 
 ```hbs
 <label for="input" class="form-label" ...attributes>{{@input-label}}</label>
 <input type="text" id="input" ...attributes aria-describedby="text-help-0"  />
-<span class="text-help" id="text-help-0">Password Requirements: Must contain at least one letter and one number.</span>
+<span class="text-help" id="text-help-0">
+  Password Requirements: Must contain at least one letter and one number.
+</span>
 ```
-With this invocation:
+
+Invocation:
 
 ```hbs
   <MyInput @input-label="Password" aria-describedby="text-help-0 text-help-1" />
   <span class="text-help" id="text-help-1">Must also include a special character.</span>
 ```
 
+Result: 
 We expect the location of `...attributes` to affect the final result- and it does. `aria-describedby` only has one value, `text-help-0`: 
 
 ```hbs
   <input id="input" aria-describedby="text-help-0" type="text">
 ```
+
 The other isn't associated with the input. This means that the sighted user will see all of the help text. The user with a screen reader will only receive part of the instructions, leaving them unable to complete the task. 
 
 ### Scenario 2
@@ -74,7 +81,7 @@ However, if we moved the position of the `...attributes` in our component:
 <input type="text" id="input" aria-describedby="text-help-0"  ...attributes />
 ```
 
-With the same invocation:
+If the developer invoked this component the same way they would for the `class` attribute (because they want to add additional ones, not replace existing ones):
 
 ```hbs
   <MyInput @input-label="Password" aria-describedby="text-help-1" />
@@ -86,11 +93,11 @@ We will get this result:
   <input id="input" aria-describedby="text-help-1" type="text">
 ```
 
-The `...attribute` placement has made it so the `aria-describedby` value has been completely replaced, not appended.  
+The `...attribute` placement has made it so the `aria-describedby` value has been completely replaced, not appended. This means, again,  that the sighted user will see all of the help text but the user with a screen reader will only receive part of the instructions, leaving them unable to complete the task. 
 
 ### Scenario 3
 
-The workaround is to know what the `aria-describedby` value is in the component, and make sure that both are declared when the component is invoked:
+The workaround is to know what the `aria-describedby` value is already declared in the component, and make sure that both are declared when the component is invoked:
 
 Component: 
 ```hbs
