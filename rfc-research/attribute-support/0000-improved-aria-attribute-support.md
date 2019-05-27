@@ -36,11 +36,11 @@ Used less often:
 
 Since this order can matter, the author should be able to specify that order themselves - the same way they can currently specify the values for the `class` attribute.
 
-Think about it in this way. This is a sentence in three parts:
+This is a sentence in three parts:
 
 (The cat) (ran) (to me)
 
-The order of the three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense (unless I was Yoda). We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
+The order of the three parts of this sentence matter- If I said "Ran the cat to me", that might not make a lot of sense. We can also think about this in the context of why the order of the values of the `class` attribute matter on an HTML element. 
 
 Right now, the position of `...attributes` indicates whether or not an attribute value can be overridden:
 
@@ -101,6 +101,8 @@ The `...attribute` placement BEFORE the `class` attribute will cause the classes
 For the `aria` attributes in this RFC, the expectation is that they would work the same way as the `class` attribute. 
 
 
+
+
 ## How we teach this
 
 There are some `aria` attributes that can receive multiple values. Since this order can matter (the same way the order of `class` attribute values can matter for CSS), Ember will respect the order that you define the values for these attributes. 
@@ -113,7 +115,8 @@ There are some `aria` attributes that can receive multiple values. Since this or
 
 - implement exceptions for only the two most common ones- `aria-labelledby` and `aria-describedby`
 - re-write the entire feature to give more granular control
+- update the guides to inform users that for these `aria` attributes, they must make it so they can always be overridden, and ensure that developers understand that multiple values can be provided **and** that the order matters. 
 
 ## Unresolved questions
 
-- Are there other attributes that both accept multiple values and also for who that value order matters?
+- Are there other attributes that both accept multiple values and also for who that value order matters? While this RFC covers all of the ones listed in the ARIA spec
