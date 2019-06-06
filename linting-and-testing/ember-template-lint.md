@@ -22,4 +22,4 @@ The linting rules should at least cover the most common issues as per the [milli
 | iframe-has-title | [PR631](https://github.com/ember-template-lint/ember-template-lint/pull/631) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | aria-unsupported-elements| [PR629](https://github.com/ember-template-lint/ember-template-lint/pull/629) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | no-positive-tabindex | [PR633](https://github.com/ember-template-lint/ember-template-lint/pull/633) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
-| no-obsolete-elements | [PR733](https://github.com/ember-template-lint/ember-template-lint/pull/733/) | | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
+| no-obsolete-elements | [PR733](https://github.com/ember-template-lint/ember-template-lint/pull/733/) | 06Jun19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
