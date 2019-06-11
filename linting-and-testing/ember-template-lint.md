@@ -18,8 +18,7 @@ The linting rules should at least cover the most common issues as per the [milli
 | no-access-key | [PR632](https://github.com/ember-template-lint/ember-template-lint/pull/632) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | no-static-element-interactions | [PR635](https://github.com/ember-template-lint/ember-template-lint/pull/635) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | a11y-alt-text | [PR624](https://github.com/ember-template-lint/ember-template-lint/pull/624) | 23Jan19 | <ul><li>[x] PR</li><li>[x] Reviewed</li><li>[ ] Merged</li></ul> |
-| no-disctracting-elements | [PR634](https://github.com/ember-template-lint/ember-template-lint/pull/634) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | iframe-has-title | [PR631](https://github.com/ember-template-lint/ember-template-lint/pull/631) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | aria-unsupported-elements| [PR629](https://github.com/ember-template-lint/ember-template-lint/pull/629) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
 | no-positive-tabindex | [PR633](https://github.com/ember-template-lint/ember-template-lint/pull/633) | 24Jan19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
-| no-obsolete-elements | [PR733](https://github.com/ember-template-lint/ember-template-lint/pull/733/) | 06Jun19 | <ul><li>[x] PR</li><li>[ ] Reviewed</li><li>[ ] Merged</li></ul> |
+| no-obsolete-elements | [PR733](https://github.com/ember-template-lint/ember-template-lint/pull/733/) | 06Jun19 | <ul><li>[x] PR</li><li>[x] Reviewed</li><li>[x] Merged</li></ul> |
