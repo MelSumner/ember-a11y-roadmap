@@ -5,22 +5,26 @@ First, if you are not familiar with digital accessibility, please reference the 
 
 If you wish to contribute to this repository, PRs are welcome.
 
-## The things that fail WCAG conformance OOB
-(meaning, if you build a brand new Ember app, and run tests on that brand new app, it fails conformance criteria)
-- Page titles should be unique per page
-- no language attribute on the `<html>` element
-- Routing in SPAs
+## Low-effort changes
+- Add support for page titles (should be unique per page)
+- Add default language attribute on the `<html>` element
+- Release an official framework statement regarding A11y in Ember.js
+- Publishing a "roadmap" or "intent to improve" list (along with an invitation to contribute)
 
 ## Things we should improve 
-- the way routing works with screen readers
+- the way the router works (or doesn't) with screen readers
+- improved support for aria-* attributes (including splattributes)
 - focus management
-- modals/popups/alerts
 - keyboard navigation
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
+- A11y in the guides
+- component patterns for accessible components
 - linting
 - ember language server support
-- improved support for aria-* attributes
 
+## Innovation Opportunities
+Right now, only about 30% of accessibility issues can be automatically tested. We have the opportunity to improve that through innovative tooling. 
+- CLI tool for http://adrianroselli.com/2019/04/reading-order-bookmarklet.html
 
 ## RFCs 
 
