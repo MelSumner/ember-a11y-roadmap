@@ -5,6 +5,12 @@ First, if you are not familiar with digital accessibility, please reference the 
 
 If you wish to contribute to this repository, PRs are welcome.
 
+## The things that fail WCAG conformance OOB
+(meaning, if you build a brand new Ember app, and run tests on that brand new app, it fails conformance criteria)
+- Page titles should be unique per page
+- no language attribute on the `<html>` element
+- Routing in SPAs
+
 ## Things we should improve 
 - the way routing works with screen readers
 - focus management
@@ -14,6 +20,7 @@ If you wish to contribute to this repository, PRs are welcome.
 - linting
 - ember language server support
 - improved support for aria-* attributes
+
 
 ## RFCs 
 
