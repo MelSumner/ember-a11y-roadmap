@@ -27,3 +27,12 @@ How does assistive technology handle this issue on a practical level?
 This is a combo box which allows you to select the language that NVDA's user interface and messages should be shown in. There are many languages, however the default option is "User Default, Windows". This option tells NVDA to use the language that Windows is currently set to.
 
 Please note that NVDA must be restarted when changing the language. When the confirmation dialog appears, select "restart now" or "restart later" if you wish to use the new language now or at a later time, respectively. If "restart later" is selected, the configuration must be saved (either manually or using the save on exit functionality).
+
+(put other AT research here)
+
+## Other
+
+I would like to convince Ember to do the correct thing without discussing the non-technical parts of this issue, namely:
+
+- socio-economic status of people with disabilities (in the world at large, in first-world countries vs others), and how that determines who "gets to" use the web and who doesn't
+- accessibility testing and lawsuits in countries that provide legal protection for people with disabilities
