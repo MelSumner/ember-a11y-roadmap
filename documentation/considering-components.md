@@ -16,4 +16,4 @@ When considering how to improve components in general, a few considerations come
 
 We need a better way to balance all of these things- a difficult task to be sure, but not an impossible one. 
 
-Stay tuned. 
+The work has started, and will continue, here: https://app.gitbook.com/@melsumner/s/ember-component-patterns/ 
