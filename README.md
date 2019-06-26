@@ -5,19 +5,22 @@ First, if you are not familiar with digital accessibility, please reference the 
 
 If you wish to contribute to this repository, PRs are welcome.
 
-## Low-effort changes (immediate a11y improvements to demonstrate commitment)
+## Low-effort changes
+These are low-effort changes we could immediately make, to demonstrate commitment to accessibility in EmberJS. These things may not be perfect, but they would be wins, and we could iterate over time (keeping in mind, "don't let the perfect be the enemy of the good"). 
+
 - Add support for page titles (should be unique per page)
 - Add default language attribute on the `<html>` element - [basic documentation](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/language/default-language.md)
 - Add `aria-label`, `aria-labelledby`, and `aria-describedby` attributes to the `...attributes` exceptions (like `class`)
 - Release an official framework statement regarding A11y in Ember.js
 - Publishing a "roadmap" or "intent to improve" list (along with an invitation to contribute)
 
-## Things we should improve long term (high-effort)
+## Long-term changes
+After some discussion, these things need a larger effort refactor, and accessibility should be part of that re-design:
 - Ember Router (and ensure support for assistive tech)
 - refactor the way `...attributes` works
 - create a locale-aware start to Ember apps
 
-## other things we could also do
+## Other useful improvements
 - focus management
 - keyboard navigation
 - semantic test helpers (improves code in general but could specifically be used to better test for accessibility conformance)
