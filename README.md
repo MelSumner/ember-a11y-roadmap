@@ -6,12 +6,12 @@ First, if you are not familiar with digital accessibility, please reference the 
 If you wish to contribute to this repository, PRs are welcome.
 
 ## Low-effort changes
+- Add support for page titles (should be unique per page)
 - Add default language attribute on the `<html>` element - [basic documentation](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/language/default-language.md)
 - Release an official framework statement regarding A11y in Ember.js
 - Publishing a "roadmap" or "intent to improve" list (along with an invitation to contribute)
 
 ## Things we should improve 
-- Add support for page titles (should be unique per page)
 - the way the router works (or doesn't) with screen readers
 - improved support for aria-* attributes (including splattributes)
 - focus management
