@@ -6,7 +6,7 @@ First, if you are not familiar with digital accessibility, please reference the 
 If you wish to contribute to this repository, PRs are welcome.
 
 ## Low-effort changes
-These are low-effort changes we could immediately make, to demonstrate commitment to accessibility in EmberJS. These things may not be perfect, but they would be wins, and we could iterate over time (keeping in mind, "don't let the perfect be the enemy of the good"). 
+These are low-effort changes we could immediately make, to demonstrate commitment to accessibility in EmberJS. All of the changes proposed may need iteration toward a long-term solution.  
 
 - Add support for page titles (should be unique per page)
 - Add default language attribute on the `<html>` element - [basic documentation](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/language/default-language.md)
