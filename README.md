@@ -8,7 +8,7 @@ If you wish to contribute to this repository, PRs are welcome.
 ## Low-effort changes
 These are low-effort changes we could immediately make, to demonstrate commitment to accessibility in EmberJS. All of the changes proposed may need iteration toward a long-term solution.  
 
-- Add support for page titles (should be unique per page as per [WCAG 2.4.2- Page Titled](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=242#page-titled))
+- Add support for page titles (should be unique per page as per [WCAG 2.4.2- Page Titled](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=242#page-titled)). Similar is provided by [ember-page-title](https://github.com/adopted-ember-addons/ember-page-title).
 - Add default language attribute on the `<html>` element - [basic documentation](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/language/default-language.md)
 - Add `aria-label`, `aria-labelledby`, and `aria-describedby` attributes to the `...attributes` exceptions (like `class`) - [proposed draft RFC](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/attribute-support/0000-improved-aria-attribute-support.md)
 - Release an official framework statement regarding A11y in Ember.js
