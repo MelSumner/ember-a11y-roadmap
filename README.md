@@ -18,7 +18,7 @@ These are low-effort changes we could immediately make, to demonstrate commitmen
 After some discussion, these things need a larger effort refactor, and accessibility should be part of that re-design:
 - Ember Router (and ensure support for assistive tech)
 - refactor the way the `...attributes` feature works
-- create a locale-aware start to Ember apps
+- create a locale-aware start to Ember apps?
 
 ## Other useful improvements
 - focus management
