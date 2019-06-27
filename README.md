@@ -10,7 +10,7 @@ These are low-effort changes we could immediately make, to demonstrate commitmen
 
 - Add support for page titles (should be unique per page)
 - Add default language attribute on the `<html>` element - [basic documentation](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/language/default-language.md)
-- Add `aria-label`, `aria-labelledby`, and `aria-describedby` attributes to the `...attributes` exceptions (like `class`)
+- Add `aria-label`, `aria-labelledby`, and `aria-describedby` attributes to the `...attributes` exceptions (like `class`) - [proposed draft RFC](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/attribute-support/0000-improved-aria-attribute-support.md)
 - Release an official framework statement regarding A11y in Ember.js
 - Publishing a "roadmap" or "intent to improve" list (along with an invitation to contribute)
 
