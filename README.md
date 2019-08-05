@@ -31,6 +31,7 @@ After some discussion, these things need a larger effort refactor, and accessibi
 
 ## Innovation Opportunities
 Right now, only about 30% of accessibility issues can be automatically tested. We have the opportunity to improve that through innovative tooling. 
+- we should at least get the 30% right, then innovate on the other 70%
 - CLI tool for http://adrianroselli.com/2019/04/reading-order-bookmarklet.html
 
 ## RFCs 
