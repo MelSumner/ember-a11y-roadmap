@@ -10,8 +10,8 @@ There are well-known issues that users with assistive technology have when it co
 
 -	Because there is no full-page refresh, the user has no way of knowing that the page has changed at all. 
 -	Because there is no focus management, the user’s focus remains where it is.
-  o	In cases where the item that had focus goes away, focus is lost. 
-  o	In the cases where the item that has focus doesn’t go away, the focus simply remains where it is (and if you imagine the user interacting with a link in the footer, and then they experience silence- and their focus still stays on that link in the footer- well, that’s a bad experience. Makes it feel like something is broken.
+  - In cases where the item that had focus goes away, focus is lost. 
+  - In the cases where the item that has focus doesn’t go away, the focus simply remains where it is (and if you imagine the user interacting with a link in the footer, and then they experience silence- and their focus still stays on that link in the footer- well, that’s a bad experience. Makes it feel like something is broken.
 
 So we have two distinct issues: 
 -	Lack of focus management
