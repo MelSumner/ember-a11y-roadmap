@@ -11,7 +11,7 @@ This document will review the current solutions and provide additional reading m
 - Ember:
   - Focus management addons: [ember-a11y](https://github.com/ember-a11y/ember-a11y) & [ember-self-focused](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused) 
   - Route announcement addon: [a11y-announcer](https://github.com/ember-a11y/a11y-announcer)
-  - Route announcement + focus management: [ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus)
+  - Route announcement + focus management: [ember-a11y-refocus](https://github.com/MelSumner/ember-a11y-refocus) - Demo site (with message visible for demonstration purposes)- https://navigator-message-test-app.netlify.com/
 
 ### Documentation
 
