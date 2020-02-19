@@ -32,6 +32,7 @@ From what I am aware of, current solutions use one or more methods to resolve th
 Of all the solutions I have researched over the past two years, there are two ideas that have presented themselves with more clarity, especially over the past few months.
 
 1. Frameworks should provide an explicit node element or outlet where new content is inserted/replaced. This should differ from other outlet types, in that it receives focus when new content is added. 
-2. A joint proposal for a new event hook should be explored- something that indicates that a semantic navigation event has occurred. Both frameworks and assistive technology could use this event to indicate/recognize new content. 
+
+2. A joint proposal for a new event hook should be explored- something that indicates that a semantic navigation event has occurred. (Vaguely, imagine something like `pushState` but also have a second parameter with a promise that resolves with a DOM node.) Both frameworks and assistive technology could use this event to indicate/recognize new content. 
 
 What do you think?
