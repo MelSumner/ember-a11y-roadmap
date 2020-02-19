@@ -19,7 +19,7 @@ So we have two distinct issues:
 
 ## Current Solutions
 
-See: [Current Solution Comparisons](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/solution-comparisons.md)
+See: [Solution Comparisons in JS Frameworks](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/solution-comparisons.md)
 
 From what I am aware of, current solutions use one or more methods to resolve the issue: 
 -	Dynamically set the focus on a wrapper element
@@ -28,7 +28,7 @@ From what I am aware of, current solutions use one or more methods to resolve th
 -	Use an aria-live region announcement
 -	Imitate a traditional browser refresh by resetting focus
 
-## Thinking About A Permanent Solutions
+## Thinking About A Permanent Solution
 Of all the solutions I have researched over the past two years, there are two ideas that have presented themselves with more clarity, especially over the past few months.
 
 1. Frameworks should provide an explicit node element or outlet where new content is inserted/replaced. This should differ from other outlet types, in that it receives focus when new content is added. 
