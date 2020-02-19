@@ -19,6 +19,8 @@ So we have two distinct issues:
 
 ## Current Solutions
 
+See: [Current Solution Comparisons](https://github.com/MelSumner/ember-a11y-roadmap/blob/master/rfc-research/router/solution-comparisons.md)
+
 From what I am aware of, current solutions use one or more methods to resolve the issue: 
 -	Dynamically set the focus on a wrapper element
 -	Dynamically set focus on a heading element (h1-h6) to move focus to the new content
