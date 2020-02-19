@@ -1,6 +1,6 @@
 # Solution Comparisons
 
-This document will review the current solutions and provide additional reading materials. 
+This document will review the current solutions and provide additional reading materials. Have additional information to add? PRs are welcome.
 
 ## Current Landscape
 
