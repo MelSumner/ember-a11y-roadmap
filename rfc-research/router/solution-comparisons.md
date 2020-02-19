@@ -6,7 +6,7 @@ This document will review the current solutions and provide additional reading m
 
 ### Solutions
 
-- React - [Reach router](https://github.com/reach/router)
+- React - [Reach router](https://github.com/reach/router) - used by [Gatsby](https://www.gatsbyjs.org/docs/making-your-site-accessible/#accessible-routing)
 - Angular - docs include instructions for managing focus for routing: https://angular.io/guide/accessibility#routing-and-focus-management
 - Ember:
   - Focus management addons: [ember-a11y](https://github.com/ember-a11y/ember-a11y) & [ember-self-focused](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused) 
